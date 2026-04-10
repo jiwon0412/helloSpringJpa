@@ -60,6 +60,10 @@
     <span th:text="${successMessage}">성공 메시지</span>
 </div>
 
+<div class="alert-danger" th:if="${errorMessage}">
+    <span th:text="${errorMessage}">에러 메시지</span>
+</div>
+
 <a class="btn" th:href="@{/categories/create}">+ 새 카테고리 등록</a>
 
 <div class="empty-msg" th:if="${#lists.isEmpty(categories)}">
