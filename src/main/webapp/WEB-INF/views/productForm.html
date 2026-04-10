@@ -135,6 +135,10 @@
         </div>
 
     </form>
-
+    <p>
+        실습 수행 일시 :
+        <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 (E) a hh:mm:ss', #locale.KOREA)}"></span>
+        | 학번 : 2371153 | 성명 : 김지원
+    </p>
 </body>
 </html>

@@ -57,7 +57,7 @@
 
         <div class="detail-row">
             <span class="detail-label">카테고리</span>
-            <span class="detail-value" th:text="*{category}">카테고리</span>
+            <span class="detail-value" th:text="${product.category != null ? product.category.name : '-'}">카테고리</span>
         </div>
 
         <div class="detail-row">
@@ -101,6 +101,9 @@
             <button type="submit" class="btn-delete">삭제</button>
         </form>
     </div>
-
-</body>
+    <p>
+        실습 수행 일시 :
+        <span th:text="${#temporals.format(#temporals.createNow(), 'yyyy년 MM월 dd일 (E) a hh:mm:ss', #locale.KOREA)}"></span>
+        | 학번 : 2371153 | 성명 : 김지원
+    </p></body>
 </html>
