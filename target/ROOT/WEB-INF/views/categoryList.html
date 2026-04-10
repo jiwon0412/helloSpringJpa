@@ -23,6 +23,33 @@
         .btn-delete:hover { color: #c0392b; }
         .alert-success { background: #d4edda; border: 1px solid #c3e6cb; color: #155724; padding: 12px 16px; border-radius: 4px; margin-bottom: 16px; }
         .empty-msg { text-align: center; padding: 40px; color: #999; font-size: 1.1em; }
+        /* 테이블 전체 스타일 */
+        table {
+            width: 100%;
+            border-collapse: collapse; /* 테두리 겹침 방지 (중요!) */
+            margin-top: 20px;
+            border-top: 2px solid #4a90d9; /* 테이블 상단 굵은 선 */
+        }
+        /* 제목 칸 스타일 */
+        th {
+            background: #f8f9fa;
+            color: #333;
+            padding: 12px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6; /* 제목 아래쪽 구분선 */
+            border-right: 1px solid #eee; /* 세로선 추가 */
+        }
+        /* 데이터 칸 스타일  */
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee; /* 가로 구분선 */
+            border-right: 1px solid #eee;  /* 세로 구분선 */
+            vertical-align: middle;
+        }
+        /* 마지막 열은 오른쪽 세로선 제거 (깔끔하게) */
+        th:last-child, td:last-child {
+            border-right: none;
+        }
     </style>
 </head>
 <body>
