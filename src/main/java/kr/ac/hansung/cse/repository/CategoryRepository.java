@@ -56,8 +56,7 @@ public class CategoryRepository {
     }
     // 카테고리 삭제
     public void delete(Long id) {
-        Category c = em.find(Category.class, id);
-        if (c != null) em.remove(c); }
+        Category c = em.find(Category.class, id); if (c != null) em.remove(c); }
 
 
 

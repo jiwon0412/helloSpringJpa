@@ -89,8 +89,11 @@ public class ProductService {
 
     // readOnly = true 상속: 검색은 읽기 전용 트랜잭션으로 충분
     public List<Product> searchByName(String keyword) {
+        // 키워드를 받아 Repository의 Containing메서드 호출
         return productRepository.findByNameContaining(keyword); }
+
     public List<Product> searchByCategory(Long categoryId) {
+        // 카테코리 ID를 받아 해당 카테고리에 속한 상품만 필터링
         return productRepository.findByCategoryId(categoryId); }
 
     /**
