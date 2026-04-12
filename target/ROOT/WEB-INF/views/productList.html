@@ -62,8 +62,6 @@
     </form>
 
     <!-- 결과 없음: #lists.isEmpty()로 빈 리스트 감지 -->
-    <p th:if="${#lists.isEmpty(products)}">검색 결과가 없습니다.</p>
-
     <div class="empty-msg" th:if="${#lists.isEmpty(products)}">
         등록된 상품이 없습니다. 새 상품을 등록해 주세요.
     </div>
